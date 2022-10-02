@@ -32,6 +32,7 @@ async function avond () {
         "hotdogs.jpg"
     ], alreadySeenEveningFoods);
     alreadySeenEveningFoods.push(chosenFood)
+    console.log(alreadySeenEveningFoods)
 }
 
 function sleep(duration) {
