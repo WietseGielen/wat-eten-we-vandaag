@@ -2,22 +2,24 @@ alreadySeenMorningFoods = [];
 alreadySeenNoonFoods = [];
 alreadySeenEveningFoods = [];
 
-async function ochtend () {
-    chosenFood = await chooseOneFood([
+function ochtend () {
+   chooseOneFood([
 
-    ], alreadySeenMorningFoods);
-    alreadySeenMorningFoods.push(chosenFood)
+    ], alreadySeenMorningFoods).then(chosenFood => {
+        alreadySeenMorningFoods.push(chosenFood);
+    });
 }
 
-async function middag () {
-    chosenFood = await chooseOneFood([
+function middag () {
+    chooseOneFood([
 
-    ], alreadySeenNoonFoods);
-    alreadySeenNoonFoods.push(chosenFood)
+    ], alreadySeenNoonFoods).then(chosenFood => {
+        alreadySeenNoonFoods.push(chosenFood);
+    })
 }
 
-async function avond () {
-    var chosenFood = await chooseOneFood([
+function avond () {
+    chooseOneFood([
         "cannelloni-spinazie.jpg",
         "pasta-pesto.jpg",
         "pasta-sciciliana.jpg",
@@ -30,9 +32,9 @@ async function avond () {
         "lasagne.jpg",
         "mousaka.jpg",
         "hotdogs.jpg"
-    ], alreadySeenEveningFoods);
-    alreadySeenEveningFoods.push(chosenFood)
-    console.log(alreadySeenEveningFoods)
+    ], alreadySeenEveningFoods).then(chosenFood => {
+        alreadySeenEveningFoods.push(chosenFood)
+    });
 }
 
 function sleep(duration) {
