@@ -3,21 +3,21 @@ alreadySeenNoonFoods = [];
 alreadySeenEveningFoods = [];
 
 async function ochtend () {
-    chosenFood = chooseOneFood([
+    chosenFood = await chooseOneFood([
 
     ], alreadySeenMorningFoods);
     alreadySeenMorningFoods.push(chosenFood)
 }
 
 async function middag () {
-    chosenFood = chooseOneFood([
+    chosenFood = await chooseOneFood([
 
     ], alreadySeenNoonFoods);
     alreadySeenNoonFoods.push(chosenFood)
 }
 
 async function avond () {
-    var chosenFood = chooseOneFood([
+    var chosenFood = await chooseOneFood([
         "cannelloni-spinazie.jpg",
         "pasta-pesto.jpg",
         "pasta-sciciliana.jpg",
