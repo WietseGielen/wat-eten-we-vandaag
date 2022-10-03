@@ -4,7 +4,8 @@ alreadySeenEveningFoods = [];
 
 function ochtend () {
    chooseOneFood([
-
+        "morning/spiegelei.jpeg",
+        "morning/yoghurt-fruit.jpg"
     ], alreadySeenMorningFoods).then(chosenFood => {
         alreadySeenMorningFoods.push(chosenFood);
     });
@@ -12,7 +13,12 @@ function ochtend () {
 
 function middag () {
     chooseOneFood([
-
+        "noon/croque.jpg",
+        "noon/smos.jpg",
+        "noon/panini-pesto.jpg",
+        "noon/tomatensoep.jpg",
+        "noon/preisoep.jpg",
+        "noon/paprikasoep.jpg"
     ], alreadySeenNoonFoods).then(chosenFood => {
         alreadySeenNoonFoods.push(chosenFood);
     })
@@ -20,18 +26,18 @@ function middag () {
 
 function avond () {
     chooseOneFood([
-        "cannelloni-spinazie.jpg",
-        "pasta-pesto.jpg",
-        "pasta-sciciliana.jpg",
-        "naambrood-pizza.jpg",
-        "vleesbrood-krieken.jpg",
-        "balletjes-tomatensaus.jpg",
-        "vegan-snitzel-appelmoes.jpg",
-        "vega-burger-zoet-aardappel.jpg",
-        "kip-met-frieten.jpg",
-        "lasagne.jpg",
-        "mousaka.jpg",
-        "hotdogs.jpg"
+        "evening/cannelloni-spinazie.jpg",
+        "evening/pasta-pesto.jpg",
+        "evening/pasta-sciciliana.jpg",
+        "evening/naambrood-pizza.jpg",
+        "evening/vleesbrood-krieken.jpg",
+        "evening/balletjes-tomatensaus.jpg",
+        "evening/vegan-snitzel-appelmoes.jpg",
+        "evening/vega-burger-zoet-aardappel.jpg",
+        "evening/kip-met-frieten.jpg",
+        "evening/lasagne.jpg",
+        "evening/mousaka.jpg",
+        "evening/hotdogs.jpg"
     ], alreadySeenEveningFoods).then(chosenFood => {
         alreadySeenEveningFoods.push(chosenFood)
     });
